@@ -1,0 +1,20 @@
+### GET all builds
+GET http://localhost:3000/api/builds
+Accept: application/json
+
+###
+
+# Create a new build
+POST http://localhost:3000/api/builds
+Content-Type: application/json
+Accept: application/json
+
+{
+  "name": "1969 Camaro RS",
+  "year": 1969,
+  "model": "Camaro RS",
+  "subtitle": "Restomod reliability upgrade",
+  "plans": "LS swap, 4L60E, disc brakes, wiring refresh",
+  "isCompleted": false,
+  "heroPhotoUrl": "https://example.com/camaro.jpg"
+}
