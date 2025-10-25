@@ -8,7 +8,10 @@ const options = {
       version: '1.0.0',
       description: 'CRUD API for Hernandez Hot Rods builds (CSE 341 Project 2)'
     },
-    servers: [{ url: 'http://localhost:3000', description: 'Local' }],
+    servers: [
+      { url: 'http://localhost:3000', description: 'Local' }
+      { url: 'https://hhr-builds-api.onrender.com', description: 'Current deployment' },
+    ],
     components: {
       schemas: {
         Build: {

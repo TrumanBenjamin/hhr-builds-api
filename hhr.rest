@@ -10,8 +10,59 @@ Content-Type: application/json
 Accept: application/json
 
 {
-  "name": "1969 Camaro RS",
-  "year": 1969,
+  "name": "1993 Nissan Pathfinder",
+  "year": 1993,
+  "model": "Nissan Pathfinder",
+  "subtitle": "Reliable daily driver",
+  "plans": "LS swap, big single turbo, e-locker rear",
+  "isCompleted": false,
+  "heroPhotoUrl": "https://example.com/pathfinder.jpg"
+}
+
+###
+
+# Get by ID
+@id = 68fd424de0dda23b878105b4
+GET http://localhost:3000/api/builds/{{id}}
+Accept: application/json
+
+
+###
+
+# Update 
+PUT http://localhost:3000/api/builds/{{id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "subtitle": "Mild restomod + interior refresh",
+  "isCompleted": true
+}
+
+###
+
+# Delete 
+DELETE http://localhost:3000/api/builds/{{id}}
+Accept: application/json
+
+
+
+
+
+# RENDER
+
+### RENDER GET all builds
+GET https://hhr-builds-api.onrender.com/api/builds
+Accept: application/json
+
+### RENDER Create a new build
+POST https://hhr-builds-api.onrender.com/api/builds
+Content-Type: application/application/json
+Accept: application/json
+
+{
+  "name": "1975 Camaro RS",
+  "year": 1975,
   "model": "Camaro RS",
   "subtitle": "Restomod reliability upgrade",
   "plans": "LS swap, 4L60E, disc brakes, wiring refresh",

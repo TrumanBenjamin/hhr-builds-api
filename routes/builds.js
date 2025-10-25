@@ -63,6 +63,7 @@
 
 const router = require('express').Router();
 const c = require('../controllers/buildsController');
+const validateObjectId = require('../middleware/validateObjectId');
 
 // CRUD
 router.get('/', c.listBuilds);
