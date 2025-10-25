@@ -22,7 +22,7 @@ Accept: application/json
 ###
 
 # Get by ID
-@id = 68fd424de0dda23b878105b4
+@id = 
 GET http://localhost:3000/api/builds/{{id}}
 Accept: application/json
 
@@ -57,7 +57,7 @@ Accept: application/json
 
 ### RENDER Create a new build
 POST https://hhr-builds-api.onrender.com/api/builds
-Content-Type: application/application/json
+Content-Type: application/json
 Accept: application/json
 
 {
@@ -69,3 +69,24 @@ Accept: application/json
   "isCompleted": false,
   "heroPhotoUrl": "https://example.com/camaro.jpg"
 }
+
+### RENDER Get by ID
+@id = 
+GET https://hhr-builds-api.onrender.com/api/builds/{{id}}
+Accept: application/json
+
+
+### RENDER Update 
+PUT https://hhr-builds-api.onrender.com/api/builds/{{id}}
+Content-Type: application/json
+Accept: application/json
+
+{
+  "subtitle": "Mild restomod + interior refresh",
+  "isCompleted": true
+}
+
+
+### RENDER Delete 
+DELETE https://hhr-builds-api.onrender.com/api/builds/{{id}}
+Accept: application/json

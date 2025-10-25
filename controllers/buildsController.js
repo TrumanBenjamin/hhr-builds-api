@@ -46,17 +46,14 @@ exports.updateBuild = async (req, res, next) => {
 
     const _id = new ObjectId(req.params.id);
 
-    // Do the update
     const result = await col().updateOne(
       { _id },
       { $set: { ...value, updatedAt: new Date() } }
     );
 
-    // If no match found → 404
     if (result.matchedCount === 0)
       return res.status(404).json({ error: 'Not found' });
 
-    // Fetch the updated document and return it
     const updated = await col().findOne({ _id });
     res.status(200).json(updated);
   } catch (err) {
